@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinnacle 2K25 - E-Ticket</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <!-- Form to enter event and team member details -->
+    <form id="ticketForm">
+      <h1>GET YOUR TICKETS!!!</h1>
+      <label for="eventName">Event Name:</label>
+      <input type="text" id="eventName" required placeholder="Enter Event Name" />
+
+      <label for="teamMembers">Team Members:</label>
+      <input type="text" id="teamMembers" required placeholder="Enter Team Members" />
+
+      <button type="submit">Generate Ticket</button>
+    </form>
+  </div>
+
+  <div class="ticket-container">
+    <div class="ticket">
+      <!-- Section 1 -->
+      <div class="section-1">
+        <img src="logosamp.png" alt="Logo" class="logo-left">
+        <div class="center-text">
+          <h3>KRIXTEN ENGINEERING COLLEGE</h3>
+          <h2>Department of IT</h2>
+          <p class="sympo-name">EVENTS 2K25</p>
+          <p class="team-members">Team Members</p>
+          <p class="members-names" id="displayTeamMembers">-</p>
+        </div>
+        <img src="logosamp.png" alt="Logo" class="logo-right">
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section-2">
+        <div class="event-name">
+          <h3>Event name</h3>
+          <h2 id="displayEventName">-</h2>
+          <h4>sponsers</h4>
+          <img src="svg-formatter-beautifier (3).png" alt="Event Logo" class="event-logo">
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section-3">
+        <div id="qrcode"></div>
+        <p>Ticket ID: <span id="ticketId">-</span></p>
+      </div>
+    </div>
+    <button id="downloadTicket">Download Ticket</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
